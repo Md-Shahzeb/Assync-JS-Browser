@@ -1,0 +1,46 @@
+Q6. Describe the purpose and usage of the localStorage and sessionStorage APIs in web development. Give
+    suitable examples for each.
+Sol: Purpose and Usage of localStorage and sessionStorage APIs in Web Development
+     Both localStorage and sessionStorage are part of the Web Storage API, which allows developers to store key-value pairs in a web browser.
+     These APIs provide a way to persist data on the client-side without relying on server-side storage. The main difference between the two lies 
+     in the duration and scope of the stored data.
+     1. localStorage
+         Purpose: localStorage is used to store data persistently across browser sessions. This means that even after the user closes the browser,
+                 the data remains available until it is explicitly deleted.
+         Usage: Data stored in localStorage does not expire automatically and is accessible by any page that shares the same origin (domain, protocol,
+              and port).
+        Example:
+                // Storing data in localStorage
+                localStorage.setItem('username', 'JohnDoe');
+
+                // Retrieving data from localStorage
+                const username = localStorage.getItem('username');
+                console.log(username); // Output: JohnDoe
+
+                // Removing data from localStorage
+                localStorage.removeItem('username');
+
+                // Clearing all data from localStorage
+                localStorage.clear();
+
+
+     2. sessionStorage
+         Purpose: sessionStorage is used to store data for the duration of a single browser session. The data is available as long as the  
+                  browser tab or window is open. Once the tab or window is closed, the data is automatically deleted.
+         Usage: Data stored in sessionStorage is only accessible within the same tab or window. Different tabs or windows with the same origin will
+                  have separate sessionStorage.           
+
+        Example:
+                // Storing data in sessionStorage
+                sessionStorage.setItem('sessionId', 'abc123');
+
+                // Retrieving data from sessionStorage
+                const sessionId = sessionStorage.getItem('sessionId');
+                console.log(sessionId); // Output: abc123
+
+                // Removing data from sessionStorage
+                sessionStorage.removeItem('sessionId');
+
+                // Clearing all data from sessionStorage
+                sessionStorage.clear();
+

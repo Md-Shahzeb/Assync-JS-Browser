@@ -1,0 +1,73 @@
+Q5.  List and briefly explain some common Browser APIs available to JavaScript developers.
+sol: API stands for Application Programming Interface. It's a set of rules that allow one program to send data to another program. 
+     APIs can be used to simplify app development, save time and money, and provide opportunities for innovation. 
+
+     Here are some common Browser APIs available to JavaScript developers:
+
+Document Object Model (DOM) API:
+Purpose: The DOM API is used to interact with and manipulate the structure and content of a web page. It represents the HTML or XML document as a tree structure, where each node is an object representing a part of the document.
+Examples:
+            document.getElementById('elementId'): Selects an element by its ID.
+            element.innerHTML = 'Hello World': Changes the content of an element.
+            element.addEventListener('click', function): Attaches an event listener to an element.
+
+Fetch API:  
+Purpose: The Fetch API provides a modern way to make HTTP requests, such as retrieving data from a server or sending data to a server. It is a promise-based alternative to XMLHttpRequest.
+Examples:
+            fetch('https://api.example.com/data'): Fetches data from a specified URL.
+            .then(response => response.json()): Processes the fetched data as JSON.
+
+
+Geolocation API:
+Purpose: The Geolocation API allows web applications to access the geographical location of the user's device, if the user grants permission.
+Examples:
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback): Retrieves the user's current position.
+            navigator.geolocation.watchPosition(successCallback): Monitors changes in the user's location.
+
+
+Canvas API:
+Purpose: The Canvas API provides a way to draw graphics and animations directly within an HTML <canvas> element. It is used for rendering 2D shapes, images, and even complex animations.
+Examples:
+            const ctx = canvas.getContext('2d'): Gets the 2D rendering context for a canvas.
+            ctx.fillRect(x, y, width, height): Draws a filled rectangle on the canvas.
+
+
+Web Storage API:
+Purpose: The Web Storage API allows web applications to store data locally within the user's browser. It provides two storage mechanisms: localStorage for persistent data storage and sessionStorage for temporary data storage.
+Examples:
+            localStorage.setItem('key', 'value'): Stores data persistently in the browser.
+            sessionStorage.getItem('key'): Retrieves data stored for the session.
+
+History API:
+Purpose: The History API allows developers to interact with the browser's session history (i.e., the URLs visited in a browser tab). This is useful for creating single-page applications (SPAs) where navigation doesn't require full page reloads.
+Examples:
+            history.pushState(state, title, url): Adds a new entry to the browser history stack.
+            history.back(): Navigates to the previous page in the session history.
+
+
+WebRTC API:
+Purpose: The WebRTC (Web Real-Time Communication) API enables peer-to-peer communication directly between browsers. It is commonly used for video conferencing, voice calls, and file sharing.
+Examples:
+            navigator.mediaDevices.getUserMedia(constraints): Accesses the user's webcam and microphone.
+            RTCPeerConnection(): Establishes a peer-to-peer connection for streaming media.
+
+
+Notification API:
+Purpose: The Notification API allows web applications to send notifications to the user's device, even when the web page is not active. It requires the user's permission to display notifications.
+Examples:
+            new Notification('Title', { body: 'Message' }): Displays a system notification.
+            Notification.requestPermission(): Requests permission to show notifications.
+            
+            
+Service Workers and Cache API:
+Purpose: Service Workers enable background scripts that run independently of web pages. Combined with the Cache API, they are used to cache resources, making web applications work offline or with poor network connectivity.
+Examples:
+            navigator.serviceWorker.register('/service-worker.js'): Registers a service worker.
+            caches.open('cacheName').then(cache => cache.addAll(urls)): Caches resources for offline use.
+
+
+Intersection Observer API:
+Purpose: The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or the viewport. It's commonly used for lazy-loading images or infinite scrolling.
+Examples:
+            new IntersectionObserver(callback): Creates a new intersection observer.
+            observer.observe(element): Starts observing the target element.

@@ -1,0 +1,29 @@
+Q4. Compare Promises to callbacks and discuss why Promises are preferred for managing asynchronous code.
+sol: In JavaScript, managing asynchronous operations is a common task, and both callbacks and Promises are 
+     mechanisms used to handle these operations. Here’s a comparison of the two:
+
+    1. Callbacks:
+        Definition: A callback is a function passed as an argument to another function and is executed after some operation has been completed.
+        Syntax: You typically pass a function as a parameter to another function, and this function gets called once the asynchronous operation 
+                is complete.
+
+    2. Promises:
+        Definition: A Promise is an object representing the eventual completion (or failure) of an asynchronous operation and  its resulting value.
+        Syntax: Promises provide .then() and .catch() methods to handle the eventual completion of an asynchronous operation.
+
+
+    Why Promises Are Preferred for Managing Asynchronous Code:
+    Avoiding Callback Hell:
+    Promises prevent the deeply nested structures that are often referred to as "callback hell," where callbacks within callbacks can make code difficult to follow.
+
+    Improved Error Handling:
+    With Promises, you can handle errors in a more streamlined way. If an error occurs at any point in a chain of Promises, the .catch() block will catch it, unlike callbacks where you need to handle errors individually.
+
+    Chaining and Composition:
+    Promises allow for chaining, where you can sequentially handle the result of one asynchronous operation before moving on to the next. This is more readable and easier to manage compared to nested callbacks.
+
+    Consistency in Asynchronous Operations:
+    Promises provide a standard way of handling asynchronous operations across different APIs and libraries. This consistency makes it easier to work with various asynchronous tasks without dealing with different callback conventions.
+
+    Cleaner Syntax with async/await:
+    With the introduction of async/await syntax in JavaScript (built on top of Promises), asynchronous code can be written in a synchronous-like manner, which greatly improves readability and maintainability.

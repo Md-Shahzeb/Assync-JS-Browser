@@ -1,0 +1,12 @@
+Q1. Define XMLHttpRequest object, and How is it used in AJAX?
+sol: XMLHttpRequest (XHR) is a JavaScript object that's used in AJAX programming to communicate with a web server asynchronously.
+     It allows a browser-based application to make server calls and store the results in its responseText attribute. This allows a
+     web page to update only a portion of the page without reloading the page or interrupting the user's current activity. 
+
+     Here are some ways you can use XMLHttpRequest to exchange data with a server:
+     Update a web page without reloading it
+     Request data from a server after the page has loaded
+     Receive data from a server after the page has loaded
+     Send data to a server in the background
+     Send partial webpage information to the server in XML format 
+     You can create an XMLHttpRequest object using the $.ajax() method

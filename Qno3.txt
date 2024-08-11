@@ -1,0 +1,10 @@
+Q3. What is the same-origin policy in the context of AJAX requests, and how can you work around it?
+sol: The same-origin policy (SOP) is a security measure that restricts how documents and scripts interact with resources from different
+     origins. It compares the origin of the requested resource to the current page, and only allows access if they match. An origin is
+      made up of a URI scheme, domain, and port number. 
+      The SOP helps isolate malicious documents, preventing them from attacking other websites. For example, it stops malicious websites
+      from reading a user's webmail or company intranet data. However, it can also limit the functionality of legitimate web applications.
+       For instance, a site can't request data from a different domain, even if the other domain is willing to provide it. 
+
+       One way to work around the SOP limitations is to use JSONP to provide a proxy for the web service. This can be done by
+       adding a script tag with a src attribute that points to a script hosted on any domain.
